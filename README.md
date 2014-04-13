@@ -15,9 +15,10 @@ Method should return an empty enumeration for numbers less than 1
 Goals
 ---------
 As much as possible, try to drive out the solution through your unit tests.
-1. Write a test
-2. Run the test and watch it fail (RED)
-3. Do the simplest possible thing to make it pass (GREEN)
-4. Clean up the code (both implementation and tests) as required (REFACTOR)
+
+1.  Write a test
+2.  Run the test and watch it fail (RED)
+3.  Do the simplest possible thing to make it pass (GREEN)
+4.  Clean up the code (both implementation and tests) as required (REFACTOR)
 
 Commit the changes for each step so they can be discussed.
