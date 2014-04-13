@@ -1,7 +1,12 @@
 Mentoring
 =========
-A set of coding excercises being used as part of mentoring a developer. The excercises are designed to be used in VS2010 Express Web Developer Edition.
-To run the tests, open nunit.exe (tools\nunit-2.6.3\bin\nunit.exe) and load the .nunit file in the exercise folder. Ensure nunit is set up to reload everything on each test run.
+A set of coding excercises being used as part of mentoring a developer.
+ - The excercises are designed to be used in VS2010 Express Web Developer Edition.  
+ - To run the tests:
+   - open nunit.exe (tools\nunit-2.6.3\bin\nunit.exe) 
+   - load the .nunit file in the exercise folder
+   - ensure nunit is set up to reload everything on each test run
+   - build the solution in visual studio and hit the run button in nunit
 
 Excercise 1 - FizzBuzz
 =================
