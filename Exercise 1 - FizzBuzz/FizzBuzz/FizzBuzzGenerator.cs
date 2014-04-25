@@ -23,6 +23,11 @@ namespace FizzBuzz
         /// Otherwise, an enumeration of "FizzBuzz" strings.</returns>
         public IEnumerable<string> FizzBuzz(int upperLimit)
         {
+            if (upperLimit <= 0)
+            {
+                return Enumerable.Empty<string>();
+            }
+
             var results = new List<string>();
 
             for (int i = 1; i <= upperLimit; i++)
