@@ -37,6 +37,10 @@ namespace FizzBuzz
                 {
                     results.Add("Fizz");
                 }
+                else if (i % 5 == 0)
+                {
+                    results.Add("Buzz");
+                }
                 else
                 {
                     results.Add(i.ToString());
