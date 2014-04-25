@@ -39,7 +39,15 @@ namespace FizzBuzz.Tests
         {
             var fizzBuzz = new FizzBuzzGenerator();
 
-            Assert.That(fizzBuzz.FizzBuzz(3).ElementAt(2), Is.EqualTo("Fizz"), "Expected 3rd element in FizzBuzz( 3 ) to be \"Fizz\"");
+            Assert.That(fizzBuzz.FizzBuzz(3).ElementAt(2), Is.EqualTo("Fizz"), "Expected 2nd element in FizzBuzz( 3 ) to be \"Fizz\"");
+        }
+
+        [Test]
+        public void FizzBuzz_Multiple_Returns_Fizz()
+        {
+            var fizzBuzz = new FizzBuzzGenerator();
+
+            Assert.That(fizzBuzz.FizzBuzz(36).ElementAt(35), Is.EqualTo("Fizz"), "Expected 35th element in FizzBuzz( 36 ) to be \"Fizz\"");
         }
 
         [Test]
@@ -47,7 +55,15 @@ namespace FizzBuzz.Tests
         {
             var fizzBuzz = new FizzBuzzGenerator();
 
-            Assert.That(fizzBuzz.FizzBuzz(5).ElementAt(4), Is.EqualTo("Buzz"), "Expected 5th element in FizzBuzz( 5 ) to be \"Buzz\"");
+            Assert.That(fizzBuzz.FizzBuzz(5).ElementAt(4), Is.EqualTo("Buzz"), "Expected 4th element in FizzBuzz( 5 ) to be \"Buzz\"");
+        }
+
+        [Test]
+        public void FizzBuzz_Multiple_Results_Buzz()
+        {
+            var fizzBuzz = new FizzBuzzGenerator();
+
+            Assert.That(fizzBuzz.FizzBuzz(40).ElementAt(39), Is.EqualTo("Buzz"), "Expected 39th element in FizzBuzz( 40 ) to be \"Buzz\"");
         }
 
         [Test]
@@ -55,7 +71,15 @@ namespace FizzBuzz.Tests
         {
             var fizzBuzz = new FizzBuzzGenerator();
 
-            Assert.That(fizzBuzz.FizzBuzz(15).ElementAt(14), Is.EqualTo("FizzBuzz"), "Expected 15h element in FizzBuzz( 15 ) to be \"FizzBuzz\"");
+            Assert.That(fizzBuzz.FizzBuzz(15).ElementAt(14), Is.EqualTo("FizzBuzz"), "Expected 14th element in FizzBuzz( 15 ) to be \"FizzBuzz\"");
+        }
+
+        [Test]
+        public void FizzBuzz_Multiple_Returns_FizzBuzz()
+        {
+            var fizzBuzz = new FizzBuzzGenerator();
+
+            Assert.That(fizzBuzz.FizzBuzz(135).ElementAt(134), Is.EqualTo("FizzBuzz"), "Expected 134th element in FizzBuzz( 135 ) to be \"FizzBuzz\"");
         }
     }
 }
