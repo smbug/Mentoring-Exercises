@@ -18,7 +18,7 @@ namespace FizzBuzz
         /// <item><description>"FizzBuzz" if the number is divisible by 3 and 5</description></item> 
         /// </list> 
         /// </summary>
-        /// <param name="upperLimit">Upper limit...</param>
+        /// <param name="upperLimit">Upper limit of integer sequence used to generate the "FizzBuzz" strings</param>
         /// <returns>An empty enumeration, if <paramref name="upperLimit"/> is less than 1. 
         /// Otherwise, an enumeration of "FizzBuzz" strings.</returns>
         public IEnumerable<string> FizzBuzz(int upperLimit)
