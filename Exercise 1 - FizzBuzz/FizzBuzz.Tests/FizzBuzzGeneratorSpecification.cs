@@ -38,6 +38,7 @@ namespace FizzBuzz.Tests
         public void FizzBuzz_Factor_Returns_Fizz()
         {
             var fizzBuzz = new FizzBuzzGenerator();
+
             Assert.That(fizzBuzz.FizzBuzz(3).ElementAt(2), Is.EqualTo("Fizz"), "Expected 3rd element in FizzBuzz( 3 ) to be \"Fizz\"");
         }
 
@@ -47,6 +48,14 @@ namespace FizzBuzz.Tests
             var fizzBuzz = new FizzBuzzGenerator();
 
             Assert.That(fizzBuzz.FizzBuzz(5).ElementAt(4), Is.EqualTo("Buzz"), "Expected 5th element in FizzBuzz( 5 ) to be \"Buzz\"");
+        }
+
+        [Test]
+        public void FizzBuzz_Factor_Results_FizzBuzz()
+        {
+            var fizzBuzz = new FizzBuzzGenerator();
+
+            Assert.That(fizzBuzz.FizzBuzz(15).ElementAt(14), Is.EqualTo("FizzBuzz"), "Expected 15h element in FizzBuzz( 15 ) to be \"FizzBuzz\"");
         }
     }
 }
