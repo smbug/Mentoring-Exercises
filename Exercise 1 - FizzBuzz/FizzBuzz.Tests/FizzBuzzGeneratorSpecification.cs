@@ -43,7 +43,7 @@ namespace FizzBuzz.Tests
         }
 
         [Test]
-        public void FizzBuzz_Factor_Results_Buzz()
+        public void FizzBuzz_Factor_Returns_Buzz()
         {
             var fizzBuzz = new FizzBuzzGenerator();
 
@@ -51,7 +51,7 @@ namespace FizzBuzz.Tests
         }
 
         [Test]
-        public void FizzBuzz_Factor_Results_FizzBuzz()
+        public void FizzBuzz_Factors_Returns_FizzBuzz()
         {
             var fizzBuzz = new FizzBuzzGenerator();
 
