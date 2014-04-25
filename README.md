@@ -1,14 +1,14 @@
 Mentoring
 =========
-A set of coding excercises being used as part of mentoring a developer.
- - The excercises are designed to be used in VS2010 Express Web Developer Edition.  
+A set of coding exercises being used as part of mentoring a developer.
+ - The exercises are designed to be used in VS2010 Express Web Developer Edition.  
  - To run the tests:
    - open nunit.exe (tools\nunit-2.6.3\bin\nunit.exe) 
    - load the .nunit file in the exercise folder
    - ensure nunit is set up to reload everything on each test run
    - build the solution in visual studio and hit the run button in nunit
 
-Excercise 1 - FizzBuzz
+Exercise 1 - FizzBuzz
 =================
 Write a method that, given a number, returns the following for each integer between 1 and the number given:
  - "Fizz" if the number is divisible by 3
