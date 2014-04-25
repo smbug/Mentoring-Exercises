@@ -38,8 +38,15 @@ namespace FizzBuzz.Tests
         public void FizzBuzz_Factor_Returns_Fizz()
         {
             var fizzBuzz = new FizzBuzzGenerator();
-            var expectedResult = new List<string>{ "1", "2", "Fizz" };
-            Assert.That(fizzBuzz.FizzBuzz(3), Is.EqualTo(expectedResult), "Expected FizzBuzz( 3 ) to return { 1, 2, Fizz }");
+            Assert.That(fizzBuzz.FizzBuzz(3).ElementAt(2), Is.EqualTo("Fizz"), "Expected 3rd element in FizzBuzz( 3 ) to be \"Fizz\"");
+        }
+
+        [Test]
+        public void FizzBuzz_Factor_Results_Buzz()
+        {
+            var fizzBuzz = new FizzBuzzGenerator();
+
+            Assert.That(fizzBuzz.FizzBuzz(5).ElementAt(4), Is.EqualTo("Buzz"), "Expected 5th element in FizzBuzz( 5 ) to be \"Buzz\"");
         }
     }
 }
