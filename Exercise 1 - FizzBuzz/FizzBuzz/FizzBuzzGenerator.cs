@@ -33,7 +33,11 @@ namespace FizzBuzz
 
             for (int i = 1; i <= upperLimit; i++)
             {
-                if (i % 3 == 0)
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    results.Add("FizzBuzz");
+                }
+                else if (i % 3 == 0)
                 {
                     results.Add("Fizz");
                 }
