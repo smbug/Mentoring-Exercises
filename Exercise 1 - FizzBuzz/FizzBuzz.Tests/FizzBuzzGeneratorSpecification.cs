@@ -17,5 +17,21 @@ namespace FizzBuzz.Tests
 
             Assert.That(fizzbuzz.FizzBuzz(10).Count(), Is.EqualTo(10), "Expected FizzBuzz( 10 ) to return 10 items"); 
         }
+
+        [Test]
+        public void FizzBuzz_Negative_Returns_Empty_Enumeration()
+        {
+            var fizzBuzz = new FizzBuzzGenerator();
+
+            Assert.That(fizzBuzz.FizzBuzz(-5), Is.Empty, "Expected FizzBuzz( -5 ) to return no items");
+        }
+
+        [Test]
+        public void FizzBuzz_Zero_Returns_Empty_Enumeration()
+        {
+            var fizzBuzz = new FizzBuzzGenerator();
+
+            Assert.That(fizzBuzz.FizzBuzz(0), Is.Empty, "Expected FizzBuzz( 0 ) to return no items");
+        }
     }
 }
