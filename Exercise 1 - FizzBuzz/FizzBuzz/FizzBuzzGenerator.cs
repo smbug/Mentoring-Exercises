@@ -13,9 +13,10 @@ namespace FizzBuzz
         /// <summary>
         /// Generates the following "FizzBuzz" strings for each integer between 1 and a given number:
         /// <list type="bullet">
-        /// <item><description>"Fizz" if the number is divisible by 3</description></item> 
-        /// <item><description>"Buzz" if the number is divisible by 5</description></item> 
-        /// <item><description>"FizzBuzz" if the number is divisible by 3 and 5</description></item> 
+        /// <item><description>"Fizz" if the integer is divisible by 3,</description></item> 
+        /// <item><description>"Buzz" if the integer is divisible by 5,</description></item> 
+        /// <item><description>"FizzBuzz" if the integer is divisible by 3 and 5, or</description></item> 
+        /// <item><description>the integer itself</description></item>
         /// </list> 
         /// </summary>
         /// <param name="upperLimit">Upper limit of integer sequence used to generate the "FizzBuzz" strings</param>
@@ -32,7 +33,14 @@ namespace FizzBuzz
 
             for (int i = 1; i <= upperLimit; i++)
             {
-                results.Add("Fizz");
+                if (i % 3 == 0)
+                {
+                    results.Add("Fizz");
+                }
+                else
+                {
+                    results.Add(i.ToString());
+                }
             }
 
             return results;
