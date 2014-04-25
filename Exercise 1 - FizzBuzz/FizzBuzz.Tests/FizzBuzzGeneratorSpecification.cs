@@ -23,7 +23,7 @@ namespace FizzBuzz.Tests
         {
             var fizzBuzz = new FizzBuzzGenerator();
 
-            Assert.That(fizzBuzz.FizzBuzz(-5), Is.Empty, "Expected FizzBuzz( -5 ) to return no items");
+            Assert.IsEmpty(fizzBuzz.FizzBuzz(-5), "Expected FizzBuzz( -5 ) to return no items");
         }
 
         [Test]
@@ -31,7 +31,7 @@ namespace FizzBuzz.Tests
         {
             var fizzBuzz = new FizzBuzzGenerator();
 
-            Assert.That(fizzBuzz.FizzBuzz(0), Is.Empty, "Expected FizzBuzz( 0 ) to return no items");
+            Assert.IsEmpty(fizzBuzz.FizzBuzz(0), "Expected FizzBuzz( 0 ) to return no items");
         }
     }
 }
