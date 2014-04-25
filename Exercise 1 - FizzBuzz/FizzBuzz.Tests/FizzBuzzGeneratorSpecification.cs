@@ -33,5 +33,13 @@ namespace FizzBuzz.Tests
 
             Assert.IsEmpty(fizzBuzz.FizzBuzz(0), "Expected FizzBuzz( 0 ) to return no items");
         }
+
+        [Test]
+        public void FizzBuzz_Factor_Returns_Fizz()
+        {
+            var fizzBuzz = new FizzBuzzGenerator();
+            var expectedResult = new List<string>{ "1", "2", "Fizz" };
+            Assert.That(fizzBuzz.FizzBuzz(3), Is.EqualTo(expectedResult), "Expected FizzBuzz( 3 ) to return { 1, 2, Fizz }");
+        }
     }
 }
