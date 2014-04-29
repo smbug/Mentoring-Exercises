@@ -30,10 +30,12 @@ namespace FizzBuzz
             }
 
             var results = new List<string>();
+
             for (int i = 1; i <= upperLimit; i++)
             {
                 results.Add(GenerateFizzBuzz(i));
             }
+
             return results;
         }
 
@@ -42,22 +44,19 @@ namespace FizzBuzz
             var fizzFactor = 3;
             var buzzFactor = 5;
 
-            if (value % fizzFactor == 0 && value % buzzFactor == 0)
+            var result = string.Empty;
+
+            if (value % fizzFactor == 0)
             {
-                return "FizzBuzz";
+                result = "Fizz";
             }
-            else if (value % fizzFactor == 0)
+
+            if (value % buzzFactor == 0)
             {
-                return "Fizz";
+                result += "Buzz";
             }
-            else if (value % buzzFactor == 0)
-            {
-                return "Buzz";
-            }
-            else
-            {
-                return value.ToString();
-            }
+
+            return string.IsNullOrEmpty(result) ? value.ToString() : result;
         }
     }
 }
