@@ -81,5 +81,16 @@ namespace FizzBuzz.Tests
 
             Assert.That(fizzBuzz.FizzBuzz(135).ElementAt(134), Is.EqualTo("FizzBuzz"), "Expected 135th element in FizzBuzz( 135 ) to be \"FizzBuzz\"");
         }
+
+        [Test]
+        public void FizzBuzz_Fifteen_Returns_Correct_Sequence()
+        {
+            var fizzBuzz = new FizzBuzzGenerator();
+
+            var correctSequence = new List<string> { "1", "2", "Fizz", "4" ,"Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" };
+
+            Assert.That(fizzBuzz.FizzBuzz(15), Is.EqualTo(correctSequence), "Expected FizzBuzz ( 15 ) to be"
+                + " {\"1\", \"2\", \"Fizz\", \"4\" ,\"Buzz\", \"Fizz\", \"7\", \"8\", \"Fizz\", \"Buzz\", \"11\", \"Fizz\", \"13\", \"14\", \"FizzBuzz\"}");
+        }
     }
 }
