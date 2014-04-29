@@ -21,7 +21,7 @@ namespace FizzBuzz
         /// </summary>
         /// <param name="upperLimit">Upper limit of integer sequence used to generate the "FizzBuzz" strings</param>
         /// <returns>An empty enumeration, if <paramref name="upperLimit"/> is less than 1. 
-        /// Otherwise, an enumeration of "FizzBuzz" strings.</returns>
+        /// Otherwise, an enumerable of "FizzBuzz" strings.</returns>
         public IEnumerable<string> FizzBuzz(int upperLimit)
         {
             if (upperLimit <= 0)
@@ -30,28 +30,34 @@ namespace FizzBuzz
             }
 
             var results = new List<string>();
-
             for (int i = 1; i <= upperLimit; i++)
             {
-                if (i % 3 == 0 && i % 5 == 0)
-                {
-                    results.Add("FizzBuzz");
-                }
-                else if (i % 3 == 0)
-                {
-                    results.Add("Fizz");
-                }
-                else if (i % 5 == 0)
-                {
-                    results.Add("Buzz");
-                }
-                else
-                {
-                    results.Add(i.ToString());
-                }
+                results.Add(GenerateFizzBuzz(i));
             }
-
             return results;
+        }
+
+        private static string GenerateFizzBuzz(int value)
+        {
+            var fizzFactor = 3;
+            var buzzFactor = 5;
+
+            if (value % fizzFactor == 0 && value % buzzFactor == 0)
+            {
+                return "FizzBuzz";
+            }
+            else if (value % fizzFactor == 0)
+            {
+                return "Fizz";
+            }
+            else if (value % buzzFactor == 0)
+            {
+                return "Buzz";
+            }
+            else
+            {
+                return value.ToString();
+            }
         }
     }
 }
