@@ -1,0 +1,10 @@
+﻿Notes
+
+1. I considered creating a more customisable 'FizzBuzzGenerator' class, where:
+   * The 'fizzFactor' and 'buzzFactor' were private fields and had default values of 3 and 5, respectively.
+   * There was a second constructor, which enabled the caller to specify the 'fizzFactor'and 'buzzFactor' fields.
+Ultimately, I decided that this approach was a bit too over engineered.
+
+2. The README.md file said to "open nunit.exe (tools\nunit-2.6.3\bin\nunit.exe)". This folder wasn't 
+a part of the solution, so I downloaded it from the NUnit site.
+ 
