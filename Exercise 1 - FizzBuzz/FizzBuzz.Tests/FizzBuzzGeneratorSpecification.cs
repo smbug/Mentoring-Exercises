@@ -13,9 +13,9 @@ namespace FizzBuzz.Tests
         [Test]
         public void FizzBuzz_Returns_UpperLimit_Items()
         {
-            var fizzbuzz = new FizzBuzzGenerator();
+            var fizzBuzz = new FizzBuzzGenerator();
 
-            Assert.That(fizzbuzz.FizzBuzz(10).Count(), Is.EqualTo(10), "Expected FizzBuzz( 10 ) to return 10 items"); 
+            Assert.That(fizzBuzz.FizzBuzz(10).Count(), Is.EqualTo(10), "Expected FizzBuzz( 10 ) to return 10 items"); 
         }
 
         [Test]
