@@ -1,24 +1,47 @@
 ﻿namespace BinarySearch
 {
+    /// <summary>
+    /// Simple binary search.
+    /// </summary>
     public class BinarySearch
     {
-        public int? Find( int[] a, int v )
+        /// <summary>
+        /// Searches an array of integers for a specific number.
+        /// </summary>
+        /// <param name="data">Array to search through</param>
+        /// <param name="target">Number to find</param>
+        /// <returns>If the number exists in the array, the index of the target number.
+        /// Otherwise, null.</returns>
+        public int? Find(int[] data, int target)
         {
-            var x = 0;
-            var y = a.Length;
-
-            while (x != y)
+            if (data.Length == 0)
             {
-                var m = (x + y) / 2;
-                var n = a[m];
-
-                if (n < v)
-                    x = m;
-                else
-                    y = m;
+                return null;
             }
 
-            return a[x] == v ? x : (int?)null;
+            var min = 0;
+            var max = data.Length - 1;
+
+            while (min != max && min >= 0 && max >= 0)
+            {
+                var midpoint = (min + max) / 2;
+                var midpointValue = data[midpoint];
+
+                if (midpointValue == target)
+                {
+                    return midpoint;
+                }
+                else if (midpointValue < target) 
+                {
+                    min = midpoint + 1;
+                }
+                else
+                {
+                    max = midpoint - 1;
+                }
+            }
+
+            return data[min] == target ? min : (int?)null;
         }
     }
 }
