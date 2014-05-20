@@ -22,7 +22,7 @@
             var min = 0;
             var max = data.Length - 1;
 
-            while (min != max && min >= 0 && max >= 0)
+            while (min <= max)
             {
                 var midpoint = (min + max) / 2;
                 var midpointValue = data[midpoint];
@@ -41,7 +41,7 @@
                 }
             }
 
-            return data[min] == target ? min : (int?)null;
+            return null;
         }
     }
 }
