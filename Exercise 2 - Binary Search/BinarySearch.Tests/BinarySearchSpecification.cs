@@ -88,6 +88,20 @@ namespace BinarySearch.Tests
             Assert.AreEqual(ExecuteFind(oddArray, 59), 2);
         }
 
+        [TestMethod]
+        public void Searching_Array_Where_Target_Less_Than_First_Val_Returns_Null()
+        {
+            var array = new int[15] { -50, 1, 8, 10, 12, 31, 32, 34, 69, 80, 84, 100, 121, 200, 211 };
+            Assert.IsNull(ExecuteFind(array, -60));
+        }
+
+        [TestMethod]
+        public void Searching_Array_Where_Target_Larger_Than_Last_Val_Returns_Null()
+        {
+            var array = new int[15] { -50, 1, 8, 10, 12, 31, 32, 34, 69, 80, 84, 100, 121, 200, 211 };
+            Assert.IsNull(ExecuteFind(array, 800));
+        }
+
         private int? ExecuteFind( int[] array, int value )
         {
             var searcher = new BinarySearch();
