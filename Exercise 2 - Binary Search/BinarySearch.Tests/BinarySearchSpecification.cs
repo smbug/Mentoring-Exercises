@@ -102,6 +102,20 @@ namespace BinarySearch.Tests
             Assert.IsNull(ExecuteFind(array, 800));
         }
 
+        [TestMethod]
+        public void Searching_Unsorted_Array_Returns_Index()
+        {
+            var array = new int[10] { 89, 60, 98, 8, 25, 400, 32, 230, 90, 91 };
+            Assert.AreEqual(ExecuteFind(array, 98), 7);
+        }
+
+        [TestMethod]
+        public void Searching_Descending_Order_Array_Returns_Index()
+        {
+            var array = new int[10] { 400, 230, 98, 91, 90, 89, 60, 32, 25, 8 };
+            Assert.AreEqual(ExecuteFind(array, 60), 3);
+        }
+
         private int? ExecuteFind( int[] array, int value )
         {
             var searcher = new BinarySearch();
