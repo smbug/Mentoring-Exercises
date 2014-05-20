@@ -1,4 +1,6 @@
-﻿namespace BinarySearch
+﻿using System;
+
+namespace BinarySearch
 {
     /// <summary>
     /// Simple binary search.
@@ -18,6 +20,8 @@
             {
                 return null;
             }
+
+            Array.Sort(data);
 
             var min = 0;
             var max = data.Length - 1;
