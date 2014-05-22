@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace BinarySearch
 {
@@ -12,10 +13,15 @@ namespace BinarySearch
         /// </summary>
         /// <param name="data">Array to search through</param>
         /// <param name="target">Number to find</param>
-        /// <returns>If the number exists in the array, the index of the target number.
-        /// Otherwise, null.</returns>
+        /// <returns>If the number exists in the array, the index of the target number. Otherwise, null.</returns>
+        /// <exception cref="ArgumentNullException">Occurs when <paramref name="data"/> is null.</exception>
         public int? Find(int[] data, int target)
         {
+            if (data == null)
+            {
+                throw new ArgumentNullException("data");
+            }
+            
             if (data.Length == 0)
             {
                 return null;

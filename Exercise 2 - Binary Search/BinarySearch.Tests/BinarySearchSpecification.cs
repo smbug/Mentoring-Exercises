@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace BinarySearch.Tests
 {
@@ -114,6 +115,13 @@ namespace BinarySearch.Tests
         {
             var array = new int[10] { 400, 230, 98, 91, 90, 89, 60, 32, 25, 8 };
             Assert.AreEqual(ExecuteFind(array, 60), 3);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Searching_Null_Array_Throws_Exception()
+        {
+            ExecuteFind(null, 1);
         }
 
         private int? ExecuteFind( int[] array, int value )
