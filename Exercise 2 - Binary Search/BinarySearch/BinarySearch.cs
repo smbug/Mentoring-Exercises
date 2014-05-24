@@ -102,8 +102,60 @@ namespace BinarySearch
             return null;
         }
 
+        /// <summary>
+        /// Searches an array of integers, sorted in ascending order, for a specific number and returns 
+        /// the index of its first occurrence in the array.
+        /// </summary>
+        /// <param name="data">Array sorted in ascending order</param>
+        /// <param name="target">Number to find</param>
+        /// <returns>If the <paramref name="target"/> number exists in the array, the index of its first 
+        /// occurrence. Otherwise, null.</returns>
+        /// <exception cref="ArgumentNullException">Occurs when <paramref name="data"/> is null.</exception>
+        /// <exception cref="ArgumentException">Occurs when <paramref name="data"/> is not sorted in 
+        /// ascending order</exception>
         public int? FindFirst(int[] data, int target)
         {
+            if (data == null)
+            {
+                throw new ArgumentNullException("data");
+            }
+
+            if (!CheckArrayIsSorted(data))
+            {
+                throw new ArgumentException("Array must be sorted in ascending order", "data");
+            }
+
+            if (data.Length == 0)
+            {
+                return null;
+            }
+
+            int? firstOccurrenceIndex = null;
+            var min = 0;
+            var max = data.Length - 1;
+
+            while (min <= max)
+            {
+                var midpoint = (min + max) / 2;
+                var midpointValue = data[midpoint];
+
+                if (midpointValue == target)
+                {
+                    firstOccurrenceIndex = midpoint;
+                    max = midpoint - 1;
+                }
+                else if (midpointValue < target)
+                {
+                    min = midpoint + 1;
+                }
+                else
+                {
+                    max = midpoint - 1;
+                }
+            }
+
+            return firstOccurrenceIndex;
+
             return null;
         }
 
