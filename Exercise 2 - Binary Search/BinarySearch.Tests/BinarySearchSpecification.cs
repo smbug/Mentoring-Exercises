@@ -126,6 +126,14 @@ namespace BinarySearch.Tests
             ExecuteFind(null, 1);
         }
 
+        [TestMethod]
+        public void Searching_Array_With_Duplicates_Returns_An_Index()
+        {
+            var array = new int[10] { 1, 2, 3, 7, 7, 7, 7, 8, 10, 15 };
+            var result = ExecuteFind(array, 7);
+            Assert.IsTrue(result >= 3 && result <= 6);
+        }
+
         private int? ExecuteFind( int[] array, int value )
         {
             var searcher = new BinarySearch();
