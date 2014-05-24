@@ -18,24 +18,27 @@ namespace BinarySearch
     /// 2. Change the method signature to accept a HashSet. 
     /// PROS: Useful for finding a value in a collection of keys. Also, since a HashSet will always have 
     /// unique values, it will never need to be checked for duplicate values before the search begins.
-    /// CONS: Constrained to collection of distinct values.
+    /// CONS: Constrained to a collection of distinct values.
     /// 
     /// 3. Change the method signature to return a boolean, and use the basic binary search algorithm.
     /// PROS: Useful for confirming the existence of a value in a collection, much like a "Contains" method.
     /// CONS: Will not return the position of a target.
     /// 
     /// 4. Allow arrays with duplicate values, use the basic binary search algorithm, and explain in the
-    /// method comment that the index of any instance of the target will be returned. This option was chosen
-    /// for this exercise in order to keep the method signature intact. See the "Find" method.
+    /// method comment that the index of any instance of the target will be returned.
     /// PROS: Useful for situations where the position of a target is not important.
     /// CONS: Its 'pro' is also its downfall; method is not useful for finding specific positions.
     /// 
+    /// This option was chosen for this exercise in order to keep the method signature intact. See the 
+    /// "Find" method.
+    /// 
     /// 5. Modify the binary search algorithm to return the first index of the target, if it exists. For 
-    /// example, given {0, 2, 2, 2, 2, 3}, the algorithm will return 1, when searching for 2. This option 
-    /// was also chosen for this exercise just for exploration. See the "FindFirst" method.
+    /// example, given {0, 2, 2, 2, 2, 3}, the algorithm will return 1, when searching for 2.
     /// PROS: Useful for situations where the first position of a target is important.
     /// CONS: Best case will be O(log(n)), unlike the basic binary search algorithm, as the entire array will 
     /// need to be searched before stopping.
+    /// 
+    /// This option was also chosen for this exercise just for exploration. See the "FindFirst" method.
     /// 
     /// 6. Modify the binary search algorithm to return the first and last index of the target, if it exists.
     /// For example, given {0, 2, 2, 2, 2, 3}, the algorithm will return 1 and 4, when searching for 2.
