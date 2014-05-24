@@ -104,17 +104,19 @@ namespace BinarySearch.Tests
         }
 
         [TestMethod]
-        public void Searching_Unsorted_Array_Returns_Index()
+        [ExpectedException(typeof(ArgumentException))]
+        public void Searching_Unsorted_Array_Throws_Exception()
         {
             var array = new int[10] { 89, 60, 98, 8, 25, 400, 32, 230, 90, 91 };
-            Assert.AreEqual(ExecuteFind(array, 98), 7);
+            ExecuteFind(array, 1);
         }
 
         [TestMethod]
-        public void Searching_Descending_Order_Array_Returns_Index()
+        [ExpectedException(typeof(ArgumentException))]
+        public void Searching_Mostly_Sorted_Array_Throws_Exception()
         {
-            var array = new int[10] { 400, 230, 98, 91, 90, 89, 60, 32, 25, 8 };
-            Assert.AreEqual(ExecuteFind(array, 60), 3);
+            var array = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 10, 9 };
+            ExecuteFind(array, 1);
         }
 
         [TestMethod]
