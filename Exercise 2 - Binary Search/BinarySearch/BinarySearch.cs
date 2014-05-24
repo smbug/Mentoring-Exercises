@@ -58,19 +58,7 @@ namespace BinarySearch
         /// ascending order</exception>
         public int? Find(int[] data, int target)
         {
-            if (data == null)
-            {
-                throw new ArgumentNullException("data");
-            }
-
-            if (!CheckArrayIsSorted(data))
-            {
-                // NOTE The array isn't being returned at the end of the method, so the calling method
-                // may expect it to be in the same order as it was when it entered the method.
-                // So, it seems better to throw an exception for an unsorted array, rather than to sort it,
-                // to avoid unexpected surprises for the calling method.
-                throw new ArgumentException("Array must be sorted in ascending order", "data");
-            }
+            CheckFindPreconditions(data);
             
             if (data.Length == 0)
             {
@@ -115,15 +103,7 @@ namespace BinarySearch
         /// ascending order</exception>
         public int? FindFirst(int[] data, int target)
         {
-            if (data == null)
-            {
-                throw new ArgumentNullException("data");
-            }
-
-            if (!CheckArrayIsSorted(data))
-            {
-                throw new ArgumentException("Array must be sorted in ascending order", "data");
-            }
+            CheckFindPreconditions(data);
 
             if (data.Length == 0)
             {
@@ -157,6 +137,23 @@ namespace BinarySearch
             return firstOccurrenceIndex;
 
             return null;
+        }
+
+        private void CheckFindPreconditions(int[] data)
+        {
+            if (data == null)
+            {
+                throw new ArgumentNullException("data");
+            }
+
+            if (!CheckArrayIsSorted(data))
+            {
+                // NOTE The array isn't being returned at the end of the method, so the calling method
+                // may expect it to be in the same order as it was when it entered the method.
+                // So, it seems better to throw an exception for an unsorted array, rather than to sort it,
+                // to avoid unexpected surprises for the calling method.
+                throw new ArgumentException("Array must be sorted in ascending order", "data");
+            }
         }
 
         private static bool CheckArrayIsSorted(int[] data)
