@@ -25,7 +25,8 @@ namespace BinarySearch
     /// CONS: Will not return the position of a target.
     /// 
     /// 4. Allow arrays with duplicate values, use the basic binary search algorithm, and explain in the
-    /// method comment that the index of any instance of the target will be returned.
+    /// method comment that the index of any instance of the target will be returned. This option was chosen
+    /// for this exercise in order to keep the method signature intact. See the "Find" method.
     /// PROS: Useful for situations where the position of a target is not important.
     /// CONS: Its 'pro' is also its downfall; method is not useful for finding specific positions.
     /// 
@@ -44,7 +45,8 @@ namespace BinarySearch
     public class BinarySearch
     {
         /// <summary>
-        /// Searches an array of integers, sorted in ascending order, for a specific number.
+        /// Searches an array of integers, sorted in ascending order, for a specific number and returns its index.
+        /// If the number occurs more than once in the array, the index of one of these instances will be returned.
         /// </summary>
         /// <param name="data">Array sorted in ascending order</param>
         /// <param name="target">Number to find</param>
