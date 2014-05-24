@@ -11,7 +11,7 @@ namespace BinarySearch
         /// <summary>
         /// Searches an array of integers, sorted in ascending order, for a specific number.
         /// </summary>
-        /// <param name="data">Array to search through</param>
+        /// <param name="data">Array sorted in ascending order</param>
         /// <param name="target">Number to find</param>
         /// <returns>If the number exists in the array, the index of the target number. Otherwise, null.</returns>
         /// <exception cref="ArgumentNullException">Occurs when <paramref name="data"/> is null.</exception>
