@@ -31,7 +31,8 @@ namespace BinarySearch
     /// CONS: Its 'pro' is also its downfall; method is not useful for finding specific positions.
     /// 
     /// 5. Modify the binary search algorithm to return the first index of the target, if it exists. For 
-    /// example, given {0, 2, 2, 2, 2, 3}, the algorithm will return 1, when searching for 2.
+    /// example, given {0, 2, 2, 2, 2, 3}, the algorithm will return 1, when searching for 2. This option 
+    /// was also chosen for this exercise just for exploration. See the "FindFirst" method.
     /// PROS: Useful for situations where the first position of a target is important.
     /// CONS: Best case will be O(log(n)), unlike the basic binary search algorithm, as the entire array will 
     /// need to be searched before stopping.
@@ -50,7 +51,8 @@ namespace BinarySearch
         /// </summary>
         /// <param name="data">Array sorted in ascending order</param>
         /// <param name="target">Number to find</param>
-        /// <returns>If the number exists in the array, the index of the target number. Otherwise, null.</returns>
+        /// <returns>If the <paramref name="target"/> number exists in the array, the index of the number. 
+        /// Otherwise, null.</returns>
         /// <exception cref="ArgumentNullException">Occurs when <paramref name="data"/> is null.</exception>
         /// <exception cref="ArgumentException">Occurs when <paramref name="data"/> is not sorted in 
         /// ascending order</exception>
@@ -97,6 +99,11 @@ namespace BinarySearch
                 }
             }
 
+            return null;
+        }
+
+        public int? FindFirst(int[] data, int target)
+        {
             return null;
         }
 
