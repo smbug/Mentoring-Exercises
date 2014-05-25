@@ -29,8 +29,8 @@ namespace BinarySearch
     /// PROS: Useful for situations where the position of a target is not important.
     /// CONS: Its 'pro' is also its downfall; method is not useful for finding specific positions.
     /// 
-    /// This option was chosen for this exercise in order to keep the method signature intact. See the 
-    /// "Find" method.
+    /// This option was chosen for this exercise in order to keep the method signature and basic
+    /// binary search algorithm intact. See the "Find" method.
     /// 
     /// 5. Modify the binary search algorithm to return the first index of the target, if it exists. For 
     /// example, given {0, 2, 2, 2, 2, 3}, the algorithm will return 1, when searching for 2.
